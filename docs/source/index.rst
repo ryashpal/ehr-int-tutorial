@@ -1,23 +1,32 @@
-Welcome to Lumache's documentation!
-===================================
+EHR-Int
+=======
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+EHR-Int description goes here
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+.. image:: images/ehr_int_workflow.png
 
 .. note::
 
    This project is under active development.
 
+.. topic:: Acknowledgements
+
+   .. image:: images/monash.png
+      :width: 20 %
+
+   .. image:: images/alfred.png
+      :width: 20 %
+
+   .. image:: images/superbugai.png
+      :width: 20 %
+
+   .. image:: images/RMIT_University_Logo.png
+      :width: 20 %
+
 Contents
 --------
 
 .. toctree::
+   :maxdepth: 1
 
-   usage
-   api
    test
