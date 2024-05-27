@@ -102,7 +102,7 @@ Run
 
 Use the below command to run the Pathogene-On-FHIR utility. This will run the utility according to the instructions provided in the configuration file.
 
-For instructions on seting up configuration files, please refer to this `link <https://ehr-qc-tutorials.readthedocs.io/en/latest/install.html>`_
+For instructions on seting up configuration files, please refer to this `link https://ehr-int-tutorial.readthedocs.io/en/latest/pathogene_on_fhir.html#config`_
 
 .. code-block:: console
 
@@ -111,3 +111,18 @@ For instructions on seting up configuration files, please refer to this `link <h
 
 Config
 ++++++
+
+This utility uses two configuration files
+
+* App Config
+* Run Config
+
+App Config
+----------
+
+The App Config file
+
+Run Config
+----------
+
+The Run Config file
