@@ -1,2 +1,2 @@
-FHIR-Genomics-IG
+FHIR Genomics IG
 ================
