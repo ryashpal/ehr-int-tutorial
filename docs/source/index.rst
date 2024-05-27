@@ -27,6 +27,9 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   test
+   pathogene_on_fhir
+   fhir_genomics_test
+   fhir_genomics_js
+   fhir_genomics_ig
