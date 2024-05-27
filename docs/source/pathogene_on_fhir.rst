@@ -102,7 +102,7 @@ Run
 
 Use the below command to run the Pathogene-On-FHIR utility. This will run the utility according to the instructions provided in the configuration file.
 
-For instructions on seting up configuration files, please refer to this `link https://ehr-int-tutorial.readthedocs.io/en/latest/pathogene_on_fhir.html#config`_
+For instructions on seting up configuration files, please refer to this `link https://ehr-int-tutorial.readthedocs.io/en/latest/pathogene_on_fhir.html#run-config`_
 
 .. code-block:: console
 
@@ -120,9 +120,53 @@ This utility uses two configuration files
 App Config
 ----------
 
-The App Config file
+The App Config file contains app level customisations including FHIR server and database server details;
+
+FHIR Server
+~~~~~~~~~~~
+
+The following FHIR server connection details needs to be updated in the configuration file to perfrm CRUD on the FHIR resources;
+
+.. code-block:: json
+
+    fhir_server_base_url: '<FHIR Server Base URL>'
+
+Database Server
+~~~~~~~~~~~~~~~
+
+The following database server connection details needs to be updated in the configuration file to perform CRUD operations on the OMOP-CDM standard schema;
+
+.. code-block:: json
+
+    # database connection details
+    db_details = {
+        "sql_host_name": '<Host Name>',
+        "sql_port_number": '<Port Number>',
+        "sql_user_name": '<User Name>',
+        "sql_password": '<Password>',
+        "sql_db_name": '<DB Name>',
+    }
 
 Run Config
 ----------
 
-The Run Config file
+The Run Config file contains step-by-step instructions on how to run this application.
+
+It can perform 4 different operations;
+
+* OMOP-To-FHIR
+* GTF-To-FHIR
+* REMAP-To-FHIR
+* FHIR-To-OMOP
+
+OMOP-To-FHIR
+~~~~~~~~~~~~
+
+GTF-To-FHIR
+~~~~~~~~~~~
+
+REMAP-To-FHIR
+~~~~~~~~~~~~~
+
+FHIR-To-OMOP
+~~~~~~~~~~~~
