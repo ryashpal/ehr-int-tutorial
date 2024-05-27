@@ -215,11 +215,15 @@ Please refer the table below for information on the configuration fields.
    
    For example, imagine you have a hierarchy like this:
    
-   ->Root Tag
-   ->->Level 1 Tag 1
-   ->->->Sub-tag A
-   ->->->Sub-tag B
-   ->->Level 1 Tag 2
+   Root Tag
+
+      Level 1 Tag 1
+
+         Sub-tag A
+
+         Sub-tag B
+
+      Level 1 Tag 2
 
    To map ``Sub-tag A``, you would provide the path: ``Root Tag||Level 1 Tag 1||Sub-tag A``
 
