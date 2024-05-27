@@ -125,7 +125,7 @@ The App Config file contains app level customisations including FHIR server and 
 FHIR Server
 ~~~~~~~~~~~
 
-The following FHIR server connection details needs to be updated in the configuration file to perfrm CRUD on the FHIR resources;
+The following FHIR server connection details needs to be updated in the configuration file to perfrm CRUD operations on the FHIR resources;
 
 .. code-block:: json
 
@@ -152,7 +152,7 @@ Run Config
 
 The Run Config file contains step-by-step instructions on how to run this application.
 
-It can perform 4 different operations;
+It can perform 4 different functionalities;
 
 * OMOP-To-FHIR
 * GTF-To-FHIR
@@ -162,11 +162,111 @@ It can perform 4 different operations;
 OMOP-To-FHIR
 ~~~~~~~~~~~~
 
+In this functionality, the data is read from the OMOP-CDM standard schema and ingested in to the FHIR server.
+
+The root tag for this functionality is ``run_config_omop_to_fhir`` in the configuration file.
+
+There can be multiple configuration blocks under the parent tag. An example of a configuration block for migrating patient entity is given below;
+
+.. code-block:: json
+
+    # Migrating ``patient`` entity
+    {
+        'entity': 'Patient',
+        'type': 'migrate',
+        'sqlFilePath': '<Extraction SQL File Path>',
+        'jsonTemplatePath': '<FHIR Reource JSON Template File Path>',
+        'json_sql_mapping': {
+            '<SQL outout column name 1>': '<FHIR JSON tag name 1>',
+            '<SQL outout column name 2>': '<FHIR JSON tag name 2>',
+        },
+        'readFromDb': <True/False>,
+        'loadToFHIR': <True/False>,
+        'save': <True/False>,
+        'savePath': '<Save Path>',
+    },
+
+Please refer the table below for information on the configuration fields.
+
++----------------------+--------------------------------------------------------------------------------------------------------------+
+| Configuration Field  | Field Details                                                                                                |
++======================+==============================================================================================================+
+| entity               | Identifier string for the migrating entity                                                                   |
++----------------------+--------------------------------------------------------------------------------------------------------------+
+| type                 | Type of operation performed (``migrate`` for migration configuration)                                        |
++----------------------+--------------------------------------------------------------------------------------------------------------+
+| sqlFilePath          | Path to the file containing entity extraction SQL query                                                      |
++----------------------+--------------------------------------------------------------------------------------------------------------+
+| jsonTemplatePath     | Path to the file containing FHIR resource JSON template                                                      |
++----------------------+--------------------------------------------------------------------------------------------------------------+
+| json_sql_mapping     | Mapping SQL output columns to FHIR JSON tags                                                                 |
++----------------------+--------------------------------------------------------------------------------------------------------------+
+| readFromDb           | A Boolean value indicating if the data needs to be read from DB (<True/False>)                               |
++----------------------+--------------------------------------------------------------------------------------------------------------+
+| loadToFHIR           | A Boolean value indicating if the data needs to be persisted to FHIR (<True/False>)                          |
++----------------------+--------------------------------------------------------------------------------------------------------------+
+| save                 | A Boolean value indicating if the intermediate files data needs to be saved to a directory (<True/False>)    |
++----------------------+--------------------------------------------------------------------------------------------------------------+
+| savePath             | Path to the directory where the intermediate files are saved                                                 |
++----------------------+--------------------------------------------------------------------------------------------------------------+
+
+.. note::
+   To map sub-tags, you need to provide the complete path from the root tag down to the sub-tag you're interested in. This path is created by concatenating all the tags within the hierarchy, separated by a double pipe symbol (``||``).
+   
+   For example, imagine you have a hierarchy like this:
+   
+   Root Tag
+   Level 1 Tag 1
+   Sub-tag A
+   Sub-tag B
+   Level 1 Tag 2
+   
+   To map Sub-tag A, you would provide the path: Root Tag||Level 1 Tag 1||Sub-tag A
+
+An example configuration block is given below;
+
+.. code-block:: json
+
+    # Migrating ``patient`` entity
+    {
+        'entity': 'Patient',
+        'type': 'migrate',
+        'sqlFilePath': os.environ['GENOMIC_DATA_LOCATION'] + '/templates/sql/Person.sql',
+        'jsonTemplatePath': os.environ['GENOMIC_DATA_LOCATION'] + '/templates/fhir/Patient.json',
+        'json_sql_mapping': {
+            'id': 'id',
+            'sex': 'gender',
+            'patient_name': 'name||text',
+        },
+        'readFromDb': True,
+        'loadToFHIR': True,
+        'save': True,
+        'savePath': os.environ['INTERMEDIATE_DATA_LOCATION'] + '/data/omop_to_fhir/patient',
+    },
+
+.. note::
+
+   As part of the codebase, we provided the FHIR resource templates for some commonly used resources including Organization, Patient, Encounter, Observation, and RiskAssessment resources. Additionally, we also provided the extraction logic (SQL query files) for these resources from the standard OMOP-CDM schema. Futher, the pipeline provides the flexibility for the user to extract data from any schema and persist to any FHIR resource as they desire.
+
+
 GTF-To-FHIR
 ~~~~~~~~~~~
+
+In this functionality, the data is read from the GTF files and ingested in to the FHIR server.
+
+The root tag for this functionality is ``run_config_gtf_to_fhir`` in the configuration file.
 
 REMAP-To-FHIR
 ~~~~~~~~~~~~~
 
+In this functionality, the data is read from the REMAP files and ingested in to the FHIR server.
+
+The root tag for this functionality is ``run_config_remap_to_fhir`` in the configuration file.
+
 FHIR-To-OMOP
 ~~~~~~~~~~~~
+
+In this functionality, the data is read from the FHIR server and ingested in to the OMOP-CDM standard schema.
+
+The root tag for this functionality is ``run_config_fhir_to_omop`` in the configuration file.
+
