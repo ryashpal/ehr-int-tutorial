@@ -162,6 +162,9 @@ It can perform 4 different functionalities;
 OMOP-to-FHIR
 ~~~~~~~~~~~~
 
+Migrate Bolock
+##############
+
 In this functionality, the data is read from the OMOP-CDM standard schema and ingested in to the FHIR server.
 
 The root tag for this functionality is ``run_config_omop_to_fhir`` in the configuration file.
@@ -227,7 +230,7 @@ Please refer the table below for information on the configuration fields.
 
    To map ``Sub-tag A``, you would provide the path: ``Root Tag||Level 1 Tag 1||Sub-tag A``
 
-An example configuration block is given below;
+An example configuration block for ``migrate`` functionality is given below;
 
 .. code-block:: json
 
@@ -252,6 +255,63 @@ An example configuration block is given below;
 
    As part of the codebase, we provided the FHIR resource templates for some commonly used resources including Organization, Patient, Encounter, Observation, and RiskAssessment resources. Additionally, we also provided the extraction logic (SQL query files) for these resources from the standard OMOP-CDM schema. Futher, the pipeline provides the flexibility for the user to extract data from any schema and persist to any FHIR resource as they desire.
 
+Execute Bolock
+##############
+
+In addition to ``migrate`` blocks within configuration sections, you can also define ``execute`` blocks. These ``execute`` blocks allow users to run a specified code snippet when encountered. The primary purpose is to facilitate pre-processing code execution before migrating entities.
+
+For instance, consider ingesting data into the ``RiskAssessment`` resource. If risk scores are fetched from a machine learning API endpoint, an ``execute`` block can be used to collect these scores for all patients in the migrating cohort. This code would be executed before running the ``migrate`` block responsible for loading the resource.
+
+The execute block contains the following tags;
+
+.. code-block:: json
+
+    # Execute block structure
+    {
+        'type': 'execute',
+        'function': <Name of a fucntion to execute>,
+        'args': {
+            '<function param 1>': '<value 1>',
+            '<function param 2>': '<value 2>'
+            }
+    },
+
+Please refer the table below for information on the configuration fields.
+
++----------------------+----------------------------------------------------------------------+
+| Configuration Field  | Field Details                                                        |
++----------------------+----------------------------------------------------------------------+
+| type                 | Type of operation performed (``execute`` for execute configuration)  |
++----------------------+----------------------------------------------------------------------+
+| function             | Name of the fucntion to execute                                      |
++----------------------+----------------------------------------------------------------------+
+| args                 | a list of arguments and their values to be passed to the function    |
++----------------------+----------------------------------------------------------------------+
+
+An example configuration block for ``execute`` functionality is given below;
+
+.. code-block:: json
+
+   # Execute block structure
+    {
+        'type': 'execute',
+        'function': importRiskScores,
+        'args': {
+            'risk_scores_file': os.environ['EHR_DATA_LOCATION'] + '/wb_30_wa_3.csv',
+            'description': {
+                "Model": "XGBoost Ensemble",
+                "Window Before": "30 days",
+                "Window After": "3 day",
+                "Target": "Mortality",
+                "Target Time": "7 day",
+                }
+            }
+    },
+
+
+.. note::
+
+   The function has to be either defined in the configuration file or imported from elsewhere such that it is visible for execution.
 
 GTF-to-FHIR
 ~~~~~~~~~~~
