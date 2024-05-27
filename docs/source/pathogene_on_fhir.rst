@@ -122,8 +122,8 @@ App Config
 
 The App Config file contains app level customisations including FHIR server and database server details;
 
-FHIR Server
-~~~~~~~~~~~
+FHIR Server Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following FHIR server connection details needs to be updated in the configuration file to perfrm CRUD operations on the FHIR resources;
 
@@ -131,8 +131,8 @@ The following FHIR server connection details needs to be updated in the configur
 
     fhir_server_base_url: '<FHIR Server Base URL>'
 
-Database Server
-~~~~~~~~~~~~~~~
+Database Server Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following database server connection details needs to be updated in the configuration file to perform CRUD operations on the OMOP-CDM standard schema;
 
@@ -154,12 +154,12 @@ The Run Config file contains step-by-step instructions on how to run this applic
 
 It can perform 4 different functionalities;
 
-* OMOP-To-FHIR
-* GTF-To-FHIR
-* REMAP-To-FHIR
-* FHIR-To-OMOP
+* OMOP-to-FHIR
+* GTF-to-FHIR
+* REMAP-to-FHIR
+* FHIR-to-OMOP
 
-OMOP-To-FHIR
+OMOP-to-FHIR
 ~~~~~~~~~~~~
 
 In this functionality, the data is read from the OMOP-CDM standard schema and ingested in to the FHIR server.
@@ -201,11 +201,11 @@ Please refer the table below for information on the configuration fields.
 +----------------------+--------------------------------------------------------------------------------------------------------------+
 | json_sql_mapping     | Mapping SQL output columns to FHIR JSON tags                                                                 |
 +----------------------+--------------------------------------------------------------------------------------------------------------+
-| readFromDb           | A Boolean value indicating if the data needs to be read from DB (<True/False>)                               |
+| readFromDb           | A Boolean value indicating if the data needs to be read from DB (<``True/False``>)                           |
 +----------------------+--------------------------------------------------------------------------------------------------------------+
-| loadToFHIR           | A Boolean value indicating if the data needs to be persisted to FHIR (<True/False>)                          |
+| loadToFHIR           | A Boolean value indicating if the data needs to be persisted to FHIR (<``True/False``>)                      |
 +----------------------+--------------------------------------------------------------------------------------------------------------+
-| save                 | A Boolean value indicating if the intermediate files data needs to be saved to a directory (<True/False>)    |
+| save                 | A Boolean value indicating if the intermediate files data needs to be saved to a directory (<``True/False``>)|
 +----------------------+--------------------------------------------------------------------------------------------------------------+
 | savePath             | Path to the directory where the intermediate files are saved                                                 |
 +----------------------+--------------------------------------------------------------------------------------------------------------+
@@ -216,12 +216,12 @@ Please refer the table below for information on the configuration fields.
    For example, imagine you have a hierarchy like this:
    
    Root Tag
-   Level 1 Tag 1
-   Sub-tag A
-   Sub-tag B
-   Level 1 Tag 2
+      Level 1 Tag 1
+         Sub-tag A
+         Sub-tag B
+      Level 1 Tag 2
    
-   To map Sub-tag A, you would provide the path: Root Tag||Level 1 Tag 1||Sub-tag A
+   To map ``Sub-tag A`, you would provide the path: ``Root Tag||Level 1 Tag 1||Sub-tag A``
 
 An example configuration block is given below;
 
@@ -249,21 +249,21 @@ An example configuration block is given below;
    As part of the codebase, we provided the FHIR resource templates for some commonly used resources including Organization, Patient, Encounter, Observation, and RiskAssessment resources. Additionally, we also provided the extraction logic (SQL query files) for these resources from the standard OMOP-CDM schema. Futher, the pipeline provides the flexibility for the user to extract data from any schema and persist to any FHIR resource as they desire.
 
 
-GTF-To-FHIR
+GTF-to-FHIR
 ~~~~~~~~~~~
 
 In this functionality, the data is read from the GTF files and ingested in to the FHIR server.
 
 The root tag for this functionality is ``run_config_gtf_to_fhir`` in the configuration file.
 
-REMAP-To-FHIR
+REMAP-to-FHIR
 ~~~~~~~~~~~~~
 
 In this functionality, the data is read from the REMAP files and ingested in to the FHIR server.
 
 The root tag for this functionality is ``run_config_remap_to_fhir`` in the configuration file.
 
-FHIR-To-OMOP
+FHIR-to-OMOP
 ~~~~~~~~~~~~
 
 In this functionality, the data is read from the FHIR server and ingested in to the OMOP-CDM standard schema.
