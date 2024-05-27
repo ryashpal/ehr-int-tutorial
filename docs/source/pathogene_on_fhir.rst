@@ -88,7 +88,7 @@ Install all the required dependencies listed in the requirements.txt file in the
 
 
 Verify
------
+------
 
 Verify the installation by running the following command. The expected output should contain ``Pathogene-On-FHIR <version number>``.
 
@@ -96,3 +96,13 @@ Verify the installation by running the following command. The expected output sh
 
    (.venv) user@hostname:~/workspace/Pathogene-On-FHIR$ python -m Pathogene-On-FHIR -v
    Pathogene-On-FHIR 1.0
+
+Run
++++
+
+Use the below command to run the Pathogene-On-FHIR utility. This will run the utility according to the instructions provided in the configuration file.
+
+.. code-block:: console
+
+   (.venv) user@hostname:~/workspace/Pathogene-On-FHIR$ python src/Run.py
+
