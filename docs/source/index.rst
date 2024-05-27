@@ -30,6 +30,6 @@ Contents
    :maxdepth: 2
 
    pathogene_on_fhir
+   fhir_genomics_ig
    fhir_genomics_test
    fhir_genomics_js
-   fhir_genomics_ig
