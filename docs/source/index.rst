@@ -5,7 +5,7 @@ EHR-Int aims to provide a more comprehensive understanding of disease progressio
 
 **High-Level Architecture**
 
-The high-level architecture of EHR-Int is depicted below.
+The high-level architecture of EHR-Int is depicted below:
 
 .. image:: images/ehr_int_architecture.png
 
