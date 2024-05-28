@@ -169,7 +169,7 @@ In this functionality, the data is read from the OMOP-CDM standard schema and in
 
 The root tag for this functionality is ``run_config_omop_to_fhir`` in the configuration file.
 
-There can be multiple configuration blocks under the parent tag. An example of a configuration block for migrating patient entity is given below;
+There can be multiple configuration blocks under the parent tag. An outline of a configuration block for migrating patient entity is given below;
 
 .. code-block:: json
 
@@ -320,7 +320,7 @@ In this functionality, the gene marker data is read from the GTF files and inges
 
 The root tag for this functionality is ``run_config_gtf_to_fhir`` in the configuration file.
 
-There can be multiple configuration blocks under the parent tag. An example of a configuration block for migrating GTF file is given below;
+There can be multiple configuration blocks under the parent tag. An outline of a configuration block for migrating GTF file is given below;
 
 .. code-block:: json
 
@@ -378,7 +378,7 @@ In this functionality, the data is read from the REMAP files and ingested in to 
 
 The root tag for this functionality is ``run_config_remap_to_fhir`` in the configuration file.
 
-There can be multiple configuration blocks under the parent tag. An example of a configuration block for migrating REMAP file is given below;
+There can be multiple configuration blocks under the parent tag. An outline of a configuration block for migrating REMAP file is given below;
 
 .. code-block:: json
 
@@ -432,7 +432,7 @@ In this functionality, the data is read from the FHIR server and ingested in to 
 
 The root tag for this functionality is ``run_config_fhir_to_omop`` in the configuration file.
 
-There can be multiple configuration blocks under the parent tag. An example of a configuration block for migrating FHIR data to OMOP-CDM standard schema is given below;
+There can be multiple configuration blocks under the parent tag. An outline of a configuration block for migrating FHIR data to OMOP-CDM standard schema is given below;
 
 .. code-block:: json
 
