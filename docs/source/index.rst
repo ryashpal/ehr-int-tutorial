@@ -16,6 +16,10 @@ EHR-Int is a modular system, consisting of four independent codebases:
 3. **FHIR Genomics Test**: This module deals with the representation of validation framework for FHIR resources defined in the IG.
 4. **FHIR Genomics JS**: This module builds an interactive dashboard for the integrated data analysis.
 
+.. note::
+
+   In this documentation, we provide detailed usage information about Pathogene on FHIR module. However, this is only a part of EHR-Int framework which consists of other modules.
+
 **Workflow**
 
 The workflow diagram illustrating the interaction between these modules is depicted in the following image:
@@ -39,8 +43,6 @@ The workflow diagram illustrating the interaction between these modules is depic
 
    .. image:: images/RMIT_University_Logo.png
       :width: 20 %
-
-**In this documentation, we provide detailed usage information on ``Pathogene on FHIR`` module**
 
 Contents
 --------
