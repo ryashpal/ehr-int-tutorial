@@ -40,6 +40,8 @@ The workflow diagram illustrating the interaction between these modules is depic
    .. image:: images/RMIT_University_Logo.png
       :width: 20 %
 
+**In this documentation, we provide detailed usage information on ``Pathogene on FHIR`` module**
+
 Contents
 --------
 
