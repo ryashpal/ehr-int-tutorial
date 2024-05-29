@@ -125,11 +125,23 @@ The App Config file contains app level customisations including FHIR server and 
 FHIR Server Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following FHIR server connection details needs to be updated in the configuration file to perfrm CRUD operations on the FHIR resources;
+The following FHIR server connection details needs to be updated in the configuration file to perfrm CRUD operations on the FHIR resources. An outline of the configuration for specifying the FHIR server is given below;
 
 .. code-block:: json
 
     fhir_server_base_url: '<FHIR Server Base URL>'
+
+.. note::
+
+   There are multiple test servers avaialble freely online to get started with. These servers are listed in this link: https://confluence.hl7.org/display/FHIR/Public+Test+Servers. You can use one of these servers if you do not have access for your own FHIR server.
+
+An example configuration using one of the public FHIR server is given below;
+
+.. code-block:: json
+
+    fhir_server_base_url: 'https://hapi.fhir.org/baseR5/'
+
+Here in this case, I have selected a public HAPI-FHIR R5 server.
 
 Database Server Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
