@@ -539,3 +539,18 @@ An example configuration block for ``migrate`` functionality is given below;
 .. note::
 
    As part of the codebase, we provided the FHIR resource templates for some commonly used resources including Organization, Patient, Encounter, Observation, and RiskAssessment resources. Additionally, we also provided the insertion logic (SQL query files) to persist these resources in the standard OMOP-CDM schema. Futher, the pipeline provides the flexibility for the user to extract data from FHIR resource and persist to any OMOP-CDM entity as they desire.
+
+.. topic:: Acknowledgements
+
+   .. image:: images/monash.png
+      :width: 20 %
+
+   .. image:: images/alfred.png
+      :width: 20 %
+
+   .. image:: images/superbugai.png
+      :width: 20 %
+
+   .. image:: images/RMIT_University_Logo.png
+      :width: 20 %
+
