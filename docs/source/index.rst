@@ -11,14 +11,14 @@ The high-level architecture of EHR-Int is depicted below:
 
 EHR-Int is a modular system, consisting of four independent codebases:
 
-1. **Pathogene on FHIR**: This module focuses on migrating data to FHIR by sourcing it from OMOP-CDM, GTF Files, and other custom files. It can also do the reverse conversion, by reading FHIR resources and persisting it in a standard OMOP-CDM database.
+1. **FHIR-EHR-QC**: This module focuses on migrating data to FHIR by sourcing it from OMOP-CDM, GTF Files, and other custom files. It can also do the reverse conversion, by reading FHIR resources and persisting it in a standard OMOP-CDM database.
 2. **FHIR Genomics IG**: This module defines the Implementation Guide (IG) for an integrated representation of genomic information and the EHR data within the FHIR framework.
 3. **FHIR Genomics Test**: This module deals with the representation of validation framework for FHIR resources defined in the IG.
 4. **FHIR Genomics JS**: This module builds an interactive dashboard for the integrated data analysis.
 
 .. note::
 
-   In this documentation, we provide detailed usage information about Pathogene on FHIR module. However, this is only a part of EHR-Int framework which consists of other modules.
+   In this documentation, we provide detailed usage information about FHIR-EHR-QC module. However, this is only a part of EHR-Int framework which consists of other modules.
 
 **Workflow**
 
@@ -50,4 +50,4 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   pathogene_on_fhir
+   fhir_ehr_qc
