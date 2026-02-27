@@ -1,10 +1,10 @@
-Pathogene On FHIR
-=================
+FHIR-EHR-QC
+===========
 
 Installation
 ++++++++++++
 
-Follow the below steps to install Pathogene-On-FHIR in your computer.
+Follow the below steps to install FHIR-EHR-QC in your computer.
 
 
 Login
@@ -30,40 +30,40 @@ From the home directory which will be open by default, change to a suitable dire
 Clone
 -----
 
-In a destination folder, clone current version of the Pathogene-On-FHIR repository from the GitHub.
+In a destination folder, clone current version of the FHIR-EHR-QC repository from the GitHub.
 
 .. code-block:: console
 
-   user@hostname:~/workspace$ git clone https://github.com/ryashpal/EHR-Genomics.git
+   user@hostname:~/workspace$ git clone https://github.com/ryashpal/FHIR-EHR-QC.git
 
 
-Open Pathogene-On-FHIR
-----------------------
+Open FHIR-EHR-QC
+-----------------
 
-Open the Pathogene-On-FHIR directory that is downloaded from GitHub after cloning.
+Open the FHIR-EHR-QC directory that is downloaded from GitHub after cloning.
 
 .. code-block:: console
 
-   user@hostname:~/workspace$ cd Pathogene-On-FHIR
+   user@hostname:~/workspace$ cd FHIR-EHR-QC
 
 
 Create Python virtual environment
 ---------------------------------
 
-The Python virtual environment encaptulates all the libraries required for the Pathogene-On-FHIR. All the necessary libraries listed in a requirements.txt file that can be found at the root of the repository. Below are the instructions to create and install dependancies in the Python virtual environment.
+The Python virtual environment encaptulates all the libraries required for the FHIR-EHR-QC. All the necessary libraries listed in a requirements.txt file that can be found at the root of the repository. Below are the instructions to create and install dependancies in the Python virtual environment.
 
 .. note::
-   Pathogene-On-FHIR requires Python version 3.9 or higher. For installing Python, please refer the below link: https://www.python.org/downloads/
+   FHIR-EHR-QC requires Python version 3.9 or higher. For installing Python, please refer the below link: https://www.python.org/downloads/
 
 
 Create virtual environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Inside the Pathogene-On-FHIR directory, create a new Python virtual enviroment to conveniently manage all the dependencies required for the utility.
+Inside the FHIR-EHR-QC directory, create a new Python virtual enviroment to conveniently manage all the dependencies required for the utility.
 
 .. code-block:: console
 
-   user@hostname:~/workspace/Pathogene-On-FHIR$ python3 -m venv .venv
+   user@hostname:~/workspace/FHIR-EHR-QC$ python3 -m venv .venv
 
 
 Activate virtual environment
@@ -73,8 +73,8 @@ After creating the Python virtual enviroment, activate the virtual enviroment to
 
 .. code-block:: console
 
-   user@hostname:~/workspace/Pathogene-On-FHIR$ source .venv/bin/activate
-   (.venv) user@hostname:~/workspace/Pathogene-On-FHIR$
+   user@hostname:~/workspace/FHIR-EHR-QC$ source .venv/bin/activate
+   (.venv) user@hostname:~/workspace/FHIR-EHR-QC$
 
 
 Install dependencies
@@ -84,29 +84,29 @@ Install all the required dependencies listed in the requirements.txt file in the
 
 .. code-block:: console
 
-   (.venv) user@hostname:~/workspace/Pathogene-On-FHIR$ pip install -r requirements.txt
+   (.venv) user@hostname:~/workspace/FHIR-EHR-QC$ pip install -r requirements.txt
 
 
 Verify
 ------
 
-Verify the installation by running the following command. The expected output should contain ``Pathogene-On-FHIR <version number>``.
+Verify the installation by running the following command. The expected output should contain ``FHIR-EHR-QC <version number>``.
 
 .. code-block:: console
 
-   (.venv) user@hostname:~/workspace/Pathogene-On-FHIR$ python -m Pathogene-On-FHIR -v
-   Pathogene-On-FHIR 1.0
+   (.venv) user@hostname:~/workspace/FHIR-EHR-QC$ python -m FHIR-EHR-QC -v
+   FHIR-EHR-QC 1.0
 
 Run
 +++
 
-Use the below command to run the Pathogene-On-FHIR utility. This will run the utility according to the instructions provided in the configuration file.
+Use the below command to run the FHIR-EHR-QC utility. This will run the utility according to the instructions provided in the configuration file.
 
-For instructions on seting up configuration files, please refer to this `link https://ehr-int-tutorial.readthedocs.io/en/latest/pathogene_on_fhir.html#run-config`_
+For instructions on seting up configuration files, please refer to this `link https://ehr-int-tutorial.readthedocs.io/en/latest/fhir_ehr_qc.html#run-config`_
 
 .. code-block:: console
 
-   (.venv) user@hostname:~/workspace/Pathogene-On-FHIR$ python src/Run.py
+   (.venv) user@hostname:~/workspace/FHIR-EHR-QC$ python src/Run.py
 
 
 Config
