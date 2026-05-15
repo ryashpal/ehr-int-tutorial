@@ -1,4 +1,4 @@
-EHR-to_FHIR
+EHR-to-FHIR
 ===========
 
 

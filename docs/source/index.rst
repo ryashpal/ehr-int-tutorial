@@ -17,9 +17,6 @@ Pathogene-on-FHIR is a modular system, consisting of four independent codebases:
 3. **EHR-Int-Extract**: This module provides utility functions to extract the data from FHIR including EHR entities, genomic data, and integrated representations.
 4. **EHR-Int-Viz**: This module builds an interactive dashboard for the integrated data analytics.
 
-.. note::
-
-   In this documentation, we provide detailed usage information about OMOP-to-FHIR, and Genome-to-FHIR modules. However, this is only a part of Pathogene-on-FHIR framework which consists of other modules.
 
 **Workflow**
 
@@ -55,3 +52,5 @@ Contents
    configurations
    omop_to_fhir
    genome_to_fhir
+   ehr_int_extract
+   ehr_int_viz
