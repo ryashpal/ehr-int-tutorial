@@ -53,4 +53,5 @@ Contents
 
    install_run
    configurations
-   fhir_ehr_qc
+   omop_to_fhir
+   genome_to_fhir
