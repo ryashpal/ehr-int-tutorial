@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'EHR-Int'
+project = 'Pathogene-on-FHIR'
 copyright = '2023, Dr. Sonika Tyagi'
 author = 'Yashpal Ramakrishnaiah'
 
