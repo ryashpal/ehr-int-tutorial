@@ -1,25 +1,63 @@
+===========
 EHR-Int-Viz
 ===========
 
+To facilitate the utilisation of integrated data representation, we developed several functionalities as part of the EHR-Int-Viz module.
 
-To facilitate the utilisation of integrated data representation, we developed several functionalities as part of EHR-Int-Viz module.
+1. **Search Function**
+   
+   Developed to facilitate the retrieval of records from a FHIR server based on specified criteria.
 
-1. Search function was developed to facilitate the retrieval of records from a FHIR server based on specified criteria.
+   .. image:: images/ehr_int_viz_search.png
+      :alt: EHR-Int-Viz Search Interface
+      :align: center
 
-.. image:: images/ehr_int_viz_search.png
+2. **Visualisation**
+   
+   The resulting records are visualised at both the individual and group level.
+
+   * **Individual Visualisations:**
+     
+     * *Summary Plot:* Offering a high-level overview.
+
+        .. image:: images/ehr_int_viz_search.png
+            :alt: EHR-Int-Viz Search Interface
+            :align: center
+
+     * *Detailed Plots:* For much finer granularity.
+
+        .. image:: images/ehr_int_viz_search.png
+            :alt: EHR-Int-Viz Search Interface
+            :align: center
 
 
-2. The resulting records are visualised at individual and group level.
+   * **Group-Level Plots:**
+     
+     Provide visualisations of the integrated data for all records matching the search criteria. These plots are categorised into:
+     
+     * *AMR Summary*
 
-Individual visualisations include;
+        .. image:: images/ehr_int_viz_search.png
+            :alt: EHR-Int-Viz Search Interface
+            :align: center
 
-2. 1. Summary plot offering a high-level overview
-2. 2. Detailed plots for much finer granularity
+     * *FASTA Summary*
 
-Group-level plots provide visualisations of the integrated data for all records matching the search criteria. These plots are categorised into;
+        .. image:: images/ehr_int_viz_search.png
+            :alt: EHR-Int-Viz Search Interface
+            :align: center
 
-2. 3. AMR summary
-2. 4. FASTA summary
-2. 5. Token summary
+     * *Token Summary*
 
-The search results can be exported into flat files for downstream processing.
+        .. image:: images/ehr_int_viz_search.png
+            :alt: EHR-Int-Viz Search Interface
+            :align: center
+
+
+3. **Export Function**
+   
+   The search results can be exported into flat files for downstream processing.
+
+    .. image:: images/ehr_int_viz_search.png
+        :alt: EHR-Int-Viz Search Interface
+        :align: center
