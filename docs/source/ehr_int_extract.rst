@@ -5,7 +5,7 @@ EHR-Int-Extract
 The export functionality enables users to extract linked data from the FHIR server, providing a seamless interface for downstream applications. With this feature, Demographics, Measurements, Genomics, or all three of these entities can be exported as a data matrix. The exported data is formatted to ensure direct compatibility with other utilities, facilitating automated clinical outcome modelling.
 
 1. **Export Demographics**
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Help menu
 ---------
@@ -41,6 +41,7 @@ Output
 
 
 2. **Export Measurements**
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Help menu
@@ -77,6 +78,7 @@ Output
 
 
 3. **Export Genomics**
+~~~~~~~~~~~~~~~~~~~~~~
 
 
 Help menu
@@ -112,6 +114,7 @@ Output
     -sp, --save_path            Path of the file to store the outputs
 
 4. **Export Integrated Data**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Help menu

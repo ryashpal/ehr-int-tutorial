@@ -5,6 +5,7 @@ EHR-Int-Viz
 To facilitate the utilisation of integrated data representation, we developed several functionalities as part of the EHR-Int-Viz module.
 
 1. **Search Function**
+~~~~~~~~~~~~~~~~~~~~~~
 
    Developed to facilitate the retrieval of records from a FHIR server based on specified criteria.
 
@@ -13,6 +14,7 @@ To facilitate the utilisation of integrated data representation, we developed se
       :align: center
 
 2. **Visualisation**
+~~~~~~~~~~~~~~~~~~~~
 
    The resulting records are visualised at both the individual and group level.
 
@@ -55,11 +57,13 @@ To facilitate the utilisation of integrated data representation, we developed se
 
 
 3. **Export Function**
+~~~~~~~~~~~~~~~~~~~~~~
    
    The search results can be exported into flat files for downstream processing.
 
 
 4. **Dashboard**
+~~~~~~~~~~~~~~~~
 
     The utility offers interactive dashboards where users can control variables like risk score and admission date in real time to dynamically specify the data used for plotting.
 
