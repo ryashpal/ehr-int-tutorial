@@ -5,7 +5,7 @@ EHR-Int-Viz
 To facilitate the utilisation of integrated data representation, we developed several functionalities as part of the EHR-Int-Viz module.
 
 1. **Search Function**
-   
+
    Developed to facilitate the retrieval of records from a FHIR server based on specified criteria.
 
    .. image:: images/ehr_int_viz_search.png
