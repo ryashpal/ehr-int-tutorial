@@ -58,11 +58,8 @@ To facilitate the utilisation of integrated data representation, we developed se
    
    The search results can be exported into flat files for downstream processing.
 
-3. **Export Function**
-   
-   The search results can be exported into flat files for downstream processing.
 
-3. **Dashboard**
+4. **Dashboard**
 
     The utility offers interactive dashboards where users can control variables like risk score and admission date in real time to dynamically specify the data used for plotting.
 
