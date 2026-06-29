@@ -1,7 +1,7 @@
 Workshops
 =========
 
-** Pathogene-on-FHIR: Making Pathogen Genome Data Interoperable with Patient Health Records **
+**Pathogene-on-FHIR: Making Pathogen Genome Data Interoperable with Patient Health Records**
 
 This tool is selected for the:
 
