@@ -130,7 +130,7 @@ or
 
 .. code-block:: console
 
-    (.venv) app_user@hostname:~$python -m src.ehrgen.extract.Extract --help
+    (.venv) app_user@hostname:~$python -m src.ehrgen.extract.Extract --sp 
 
 Output
 
