@@ -1,0 +1,94 @@
+Pathogene-on-FHIR: Making Pathogen Genome Data Interoperable with Patient Health Records
+========================================================================================
+
+This presentation is scheduled for the:
+
+* ISMB 2026 Technology Track presentation
+
+
+Overview
+--------
+
+The integration of clinical data with pathogen genomic data offers unprecedented opportunities for tracking infectious diseases, predicting clinical outcomes, and managing antimicrobial resistance (AMR). However, digital health researchers face severe bottlenecks due to non availability of integrated data representations. To bridge this gap, we present **Pathogene-on-FHIR**, an ecosystem designed to harmonise the ingestion of clinical records and pathogen genomic data. By mapping heterogeneous datasets to standard HL7 FHIR (Fast Healthcare Interoperability Resources) schemas, the platform ensures that patient Electronic Health Record (EHR) data and pathogen genomic information is seamlessly harmonised, and immediately ready for downstream machine learning modeling of infectious diseases.
+
+
+Speakers
+--------
+
+1. Associate Professor Sonika Tyagi
+
+   Sonika is a group leader and an Associate Professor of Digital Health at the School of Computational Technologies, RMIT University. Sonika is also a co-investigator in the SuperbugAI flagship project at the Central Clinical School, Monash University.
+
+2. Dr. Yashpal Ramakrishnaiah
+
+   Yashpal is a Postdoctoral Research Fellow at the Central Clinical School, Monash University.
+
+
+Key Takeaways
+--------------
+
+#. Understanding the core architecture of the Pathogene-on-FHIR utility
+#. Ingesting raw clinical records and pathogen metadata into FHIR framework
+#. Extracting machine learning ready datamatrix from the integrated data
+
+
+Prerequisites
+-------------
+
+Our target audience is clinical data scientists, and health informatics developers. For conceptual understanding of the framework, no prior knowledge of HL7 FHIR is required. To explore the codebase or pipeline deployment, attendees are recommended to have a prior knowledge of Python and containerised workflows.
+
+
+Technical Dependencies
+----------------------
+
+#. Python 3.10 or above
+#. Docker/Apptainer
+#. PostgreSQL DB
+#. HAPI-FHIR
+
+
+Presentation Timeline
+---------------------
+
+.. list-table:: ISMB 2026 Tech Talk
+   :widths: 25 50 25
+   :header-rows: 1
+
+   * - Activity
+     - Description
+     - Duration
+   * - Introduction
+     - The critical need for pathogen genomics and clinical data integration.
+     - 08 mins
+   * - Technical Deep Dive
+     - Hands-on with the Pathogene-on-FHIR framework.
+     - 07 mins
+   * - Q&A
+     - Open floor for questions from the audience.
+     - 05 mins
+
+Acknowledgements
+----------------
+
+.. topic:: Supported By
+
+   .. image:: images/monash.png
+      :width: 20 %
+
+   .. image:: images/alfred.png
+      :width: 20 %
+
+   .. image:: images/superbugai.png
+      :width: 20 %
+
+   .. image:: images/RMIT_University_Logo.png
+      :width: 20 %
+
+
+Contents
+--------
+
+.. toctree::
+   :maxdepth: 1
+
+   ismb_2026_step_by_step_tutorial
