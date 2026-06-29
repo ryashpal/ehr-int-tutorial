@@ -50,7 +50,8 @@ Contents
 
    install_run
    configurations
-   omop_to_fhir
+   ehr_to_fhir
+   fhir_to_ehr
    genome_to_fhir
    ehr_int_extract
    ehr_int_viz
