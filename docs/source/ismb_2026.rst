@@ -92,12 +92,3 @@ Acknowledgements
 
    .. image:: images/RMIT_University_Logo.png
       :width: 20 %
-
-
-Contents
---------
-
-.. toctree::
-   :maxdepth: 1
-
-   ismb_2026_step_by_step_tutorial
