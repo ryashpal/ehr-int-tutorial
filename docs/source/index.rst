@@ -55,3 +55,4 @@ Contents
    genome_to_fhir
    ehr_int_extract
    ehr_int_viz
+   ismb_2026
