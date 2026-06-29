@@ -63,7 +63,7 @@ Presentation Timeline
      - The critical need for pathogen genomics and clinical data integration.
      - 08 mins
    * - Technical Deep Dive
-     - Hands-on with the Pathogene-on-FHIR framework.
+     - Pathogene-on-FHIR framework live demonstration.
      - 07 mins
    * - Q&A
      - Open floor for questions from the audience.
