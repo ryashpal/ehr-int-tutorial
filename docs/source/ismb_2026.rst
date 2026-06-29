@@ -1,7 +1,9 @@
-Pathogene-on-FHIR: Making Pathogen Genome Data Interoperable with Patient Health Records
-========================================================================================
+Workshops
+=========
 
-This presentation is scheduled for the:
+** Pathogene-on-FHIR: Making Pathogen Genome Data Interoperable with Patient Health Records **
+
+This tool is selected for the:
 
 * ISMB 2026 Technology Track presentation
 
