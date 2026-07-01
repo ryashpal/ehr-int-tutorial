@@ -30,7 +30,8 @@ Key Takeaways
 --------------
 
 #. Understanding the core architecture of the Pathogene-on-FHIR utility
-#. Ingesting raw clinical records and pathogen metadata into FHIR framework
+#. Explore effective methods for mapping and structuring complex genomic data within FHIR standards
+#. Ingesting raw clinical records data and matched pathogen genomic information into FHIR framework
 #. Extracting machine learning ready datamatrix from the integrated data
 
 
@@ -61,10 +62,10 @@ Presentation Timeline
      - Duration
    * - Introduction
      - The critical need for pathogen genomics and clinical data integration.
-     - 08 mins
+     - 10 mins
    * - Technical Deep Dive
      - Pathogene-on-FHIR framework live demonstration.
-     - 07 mins
+     - 05 mins
    * - Q&A
      - Open floor for questions from the audience.
      - 05 mins
