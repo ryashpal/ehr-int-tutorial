@@ -99,12 +99,42 @@ Verify the installation by running the following command. The expected output sh
    Pathogene-on-FHIR 1.0
 
 
-Generate Synthetic EHR Data
-+++++++++++++++++++++++++++
+Generate Synthetic Data
++++++++++++++++++++++++
 
-For this tutorial, we use synthetic data generated specifically to demonstrate the utility of the pipeline. Please execute the following notebook to generate the required synthetic dataset:
+For this tutorial, we use synthetic data generated specifically to demonstrate the utility of the pipeline.
 
-`Data Generation Notebook <https://gitlab.com/superbugai/pathogene-on-fhir/-/blob/main/src/init/generate_random_data.ipynb?ref_type=heads>`_
+
+EHR Data
+--------
+
+Please execute the following notebook to generate the required synthetic EHR dataset:
+
+`EHR Data Generation Notebook <https://gitlab.com/superbugai/pathogene-on-fhir/-/blob/main/src/init/01_generate_random_ehr_data.ipynb>`_
+
+
+FASTA data
+----------
+
+Please execute the following notebook to generate the required synthetic FASTA data:
+
+`FASTA Data Generation Notebook <https://gitlab.com/superbugai/pathogene-on-fhir/-/blob/main/src/init/02_generate_random_fasta_data.ipynb>`_
+
+
+GTF data
+--------
+
+Please execute the following notebook to generate the required synthetic GTF data:
+
+`GTF Data Generation Notebook <https://gitlab.com/superbugai/pathogene-on-fhir/-/blob/main/src/init/03_generate_random_gtf_data.ipynb>`_
+
+
+Index file
+--------
+
+Please execute the following notebook to generate the required index file:
+
+`Index file Generation Notebook <https://gitlab.com/superbugai/pathogene-on-fhir/-/blob/main/src/init/04_generate_random_index_data.ipynb>`_
 
 
 Import Synthetic Data to the Database
@@ -121,6 +151,21 @@ Configuration
 Finally, use the configuration file provided below to set up the workflow before running the utility:
 
 `Workflow Configuration File <https://gitlab.com/superbugai/pathogene-on-fhir/-/blob/main/src/patfhir/config/RunConfig.py?ref_type=heads>`_
+
+EHR data
+--------
+
+Configuration for EHR data can be found under the `run_config_omop_to_fhir` tag in the file.
+
+Genomic data (external links to genomic files)
+----------------------------------------------
+
+Configuration to import external links to genomic files, but not the entire data can be found under the `run_config_genome_to_fhir` tag in the file.
+
+Genomic data (detailed genomic annotations)
+----------------------------------------------
+
+Configuration to import detailed genomic annotations can be found under the `run_config_gtf_to_fhir` tag in the file.
 
 Harmonise
 +++++++++
